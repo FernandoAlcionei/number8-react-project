@@ -1,0 +1,130 @@
+$white: #FFF;
+$gray: #808080;
+$black: #000;
+$red: #FF0000;
+$orange: #FF4500;
+$green: #32CD32;
+
+.details-screen {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .details {
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        
+        .wrap-picture {
+            position: relative;
+            display: flex;
+
+            .picture {
+                border: solid $gray 1px;
+            }
+
+            .wrap-badges {
+                position: absolute;
+                bottom: 8px;
+                right: 8px;
+                left: 8px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .badge {
+                    background: $orange;
+                    padding: 5px 15px;
+                    color: $white;
+                    border: solid 1px $gray;
+                }
+            }
+        }
+
+        .product-info {
+            flex: 2;
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+
+            .name {
+                font-weight: normal;
+                margin-top: 0;
+                color: $gray;
+                font-weight: bold;
+            }
+
+            .description {
+                text-align: left;
+                color: $gray;
+            }
+        }
+
+        .wrap-cart {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .wrap-price {
+                display: flex;
+                flex-direction: row;
+                color: $gray;
+
+                .price {
+                    padding-right: 10px;
+                    font-size: 30px;
+                }
+                
+                .retail-price {
+                    text-decoration: line-through;
+                    font-size: 18px;
+                }
+            }
+
+            .wrap-btns {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                //create a theme
+                .btn-primary {
+                    padding: 10px 20px;
+                    background-color: $green;
+                    font-weight: bold;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    border-width: 1px;
+                    color: $white;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.8;
+                    }
+                }
+
+                .alert-out-stock {
+                    background: none;
+                    padding: 10px;
+                    border: none;
+                    color: $red;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .wrap-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: $gray;
+    }
+}

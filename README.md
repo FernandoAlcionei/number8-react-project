@@ -1,1 +1,4 @@
-# number8-react-project
+## Number 8 - React
+
+- npm i
+- yarn start
